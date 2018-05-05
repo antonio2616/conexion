@@ -1,0 +1,22 @@
+import java.sql.*;
+
+public class conexion {
+    Connection con;
+    
+    public Connection conexion1(){
+        try{
+           
+        
+        Class.forName("com.mysql.jdbc.Driver");
+        con = DriverManager.getConnection("jdbc:mysql://localhost/"nombre de tu base de datos"","root",""Contraseña"");
+        System.out.println("Conexion exitosa");
+    }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+            return con;
+    }
+    Statement createStatement(){
+      throw new UnsupportedOperationException("No soportado");
+    }
+}
